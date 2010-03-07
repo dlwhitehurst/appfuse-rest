@@ -481,8 +481,8 @@
 	        <commons.httpclient.version>3.1</commons.httpclient.version>
 	        <commons.io.version>1.4</commons.io.version>
 	        <commons.lang.version>2.4</commons.lang.version>
-		    <commons.logging.version>1.1</commons.logging.version>
-		    <dbunit.maven.plugin.version>1.0-beta-3</dbunit.maven.plugin.version>
+	        <commons.logging.version>1.1</commons.logging.version>
+	        <dbunit.maven.plugin.version>1.0-beta-3</dbunit.maven.plugin.version>
 	        <displaytag.version>1.1.1</displaytag.version>
 	        <dwr.version>2.0.1</dwr.version>
 	        <ehcache.version>1.4.1</ehcache.version>
