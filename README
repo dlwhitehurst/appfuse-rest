@@ -1,0 +1,5 @@
+This project produces a WAR file that can be run using mvn jetty:run-war and the URL is
+just localhost:8080/index.jsp that will redirect to http://localhost:8080/customers
+
+The project uses the Struts REST Plugin.  I just tested http://localhost:8080/customers.json and it
+produces a JSON response.  It's rough around the edges right now but it works.

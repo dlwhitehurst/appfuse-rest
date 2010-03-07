@@ -9,14 +9,29 @@
     <name>AppFuse REST Prototype</name>
     <version>1.0-SNAPSHOT</version>
     <inceptionYear>2010</inceptionYear>
-    <url>http://localhost</url>
+    <url>http://herculeangrp.org</url>
 
     <organization>
-        <name>David L. Whitehurst</name>
-        <url>http://www.dlwhitehurst.com</url>
+        <name>Herculean Group</name>
+        <url>http://herculeangrp.org</url>
     </organization>
 
-    <description>This project showcases the use of the struts REST plugin</description>
+    <description>This project showcases the use of the struts REST plugin using an AppFuse-like structure</description>
+
+    <prerequisites>
+        <maven>2.2.1</maven>
+    </prerequisites>
+
+    <scm>
+        <connection>git@github.com:dlwhitehurst/appfuse-rest.git</connection>
+        <developerConnection>git@github.com:dlwhitehurst/appfuse-rest.git</developerConnection>
+        <url>http://github.com/dlwhitehurst/appfuse-rest.git</url>
+    </scm>
+
+    <issueManagement>
+        <system>jira</system>
+        <url>http://www.herculeangrp.org/jira/browse/AFRST</url>
+    </issueManagement>
 
     <licenses>
         <license>
