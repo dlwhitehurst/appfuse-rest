@@ -1,0 +1,18 @@
+package com.cpht.service;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 3, 2009
+ * Time: 12:49:27 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class ElementManagerTest extends BaseManagerTestCase {
+
+
+    public void testManager() throws Exception {
+        // do nothing
+    }
+
+}
+

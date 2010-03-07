@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.1 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@taglib prefix="s" uri="/struts-tags" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>New Element</title>
+</head>
+<body>
+    <s:form method="post" action="http://localhost/service/json/elements">
+        <table>
+            <s:textfield name="name" label="Name"/>
+            <s:textfield name="account" label="Account" />
+            <s:textfield name="control" label="Control" />
+            <s:textfield name="list" label="List" />
+
+            <s:textfield name="accountType" label="List" />
+            <s:textfield name="amountType" label="List" />
+            <s:textfield name="listElementId" label="List" />
+            <s:textfield name="compoundElementId" label="List" />
+            <s:textfield name="compoundElementId2" label="List" />
+            <tr>
+                <td colspan="2">
+                    <s:submit />
+                </td>
+        </table>
+    </s:form>
+</body>
+</html>

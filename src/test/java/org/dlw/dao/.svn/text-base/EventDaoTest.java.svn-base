@@ -1,0 +1,71 @@
+/**
+ * Cape Henry Technologies Inc. licenses this file to You under
+ * the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License.  You may obtain a copy of
+ * the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.cpht.dao;
+
+import com.cpht.model.Event;
+
+import java.util.List;
+
+import org.springframework.dao.DataIntegrityViolationException;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 3, 2009
+ * Time: 12:47:36 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class EventDaoTest extends BaseDaoTestCase {
+
+
+    private GenericDao<Event, Long> dao;
+
+    public void setEventDao(GenericDao<Event, Long> eventDao) {
+        this.dao = eventDao;
+    }
+
+    public void testGetEvent() throws Exception {
+
+        Event event = dao.get(5L);
+
+        assertNotNull(event);
+        assertEquals(new Long(9), (Long) event.getUnderElementId());  // arbitrary id chosen
+
+    }
+
+    public void testGetEvents() throws Exception {
+        List<Event> events = dao.getAll();
+
+        assertNotNull(events);
+        //assertEquals(17, events.size());
+
+    }
+
+    public void testUpdateEvent() throws Exception {
+
+        Event event = dao.get(9L);
+
+        dao.save(event);
+        flush();
+
+        event = dao.get(9L);
+        assertEquals(new Long(4), event.getElementId2());
+
+    }
+
+
+}
+

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+<!-- ################################################################# -->
+<!-- CUSTOMER                                                          -->
+<!-- ################################################################# -->
+    <table name="customer">
+        <column>id</column>
+        <column>name</column>
+        <column>phone</column>
+        <row>
+            <value description="id">1</value>
+            <value description="name">Erin Lawlor</value>
+            <value description="phone">800-230-3478</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="name">David Whitehurst</value>
+            <value description="phone">800-344-8934</value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="name">Aaron Evans</value>
+            <value description="phone">800-377-1297</value>
+        </row>
+    </table>
+
+<!-- ################################################################# -->
+<!-- ELEMENT                                                           -->
+<!-- ################################################################# -->
+    <table name="element">
+        <column>id</column>
+        <column>account</column>
+        <column>name</column>
+        <column>accountType</column>
+        <column>amountType</column>
+        <column>list</column>
+        <column>listElementId</column>
+        <column>compoundElementId</column>
+        <column>compoundElementId2</column>
+        <column>control</column>
+        <row>
+            <value description="id">1</value>
+            <value description="account">1000</value>
+            <value description="name">Bank Accounts</value>
+            <value description="accountType">1</value>
+            <value description="amountType">4</value>
+            <value description="list">true</value>
+            <value description="listElementId">1</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="account">1200</value>
+            <value description="name">Accounts Receivable</value>
+            <value description="accountType">1</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">15</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="account">1500</value>
+            <value description="name">Office Equipment</value>
+            <value description="accountType">2</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">3</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">4</value>
+            <value description="account">1600</value>
+            <value description="name">Vehicles</value>
+            <value description="accountType">2</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">4</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">5</value>
+            <value description="account">2000</value>
+            <value description="name">Accounts Payable</value>
+            <value description="accountType">4</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">15</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">6</value>
+            <value description="account">3000</value>
+            <value description="name">Owners Equity</value>
+            <value description="accountType">6</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">15</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">7</value>
+            <value description="account">4000</value>
+            <value description="name">Sales and Contract</value>
+            <value description="accountType">8</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">8</value>
+            <value description="account">5000</value>
+            <value description="name">Cost</value>
+            <value description="accountType">9</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">9</value>
+            <value description="account">7000</value>
+            <value description="name">Office Rent</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">10</value>
+            <value description="account">7020</value>
+            <value description="name">Office Supplies</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">11</value>
+            <value description="account">7040</value>
+            <value description="name">Office Expense</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">12</value>
+            <value description="account">7060</value>
+            <value description="name">Repairs and Maintenance</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">13</value>
+            <value description="account">7070</value>
+            <value description="name">Salary</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">14</value>
+            <value description="account">7071</value>
+            <value description="name">Taxes</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">15</value>
+            <value description="account">7072</value>
+            <value description="name">License and Fees</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">16</value>
+            <value description="account">7073</value>
+            <value description="name">Postal and Shipping</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">17</value>
+            <value description="account">7080</value>
+            <value description="name">Fuel</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">false</value>
+            <value description="listElementId">0</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">18</value>
+            <value description="account">7100</value>
+            <value description="name">Insurance</value>
+            <value description="accountType">10</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">14</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">19</value>
+            <value description="account">0000</value>
+            <value description="name">Contacts</value>
+            <value description="accountType">10</value>
+            <value description="amountType">4</value>
+            <value description="list">true</value>
+            <value description="listElementId">15</value>
+            <value description="compoundElementId">0</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">20</value>
+            <value description="account">0000</value>
+            <value description="name">AR Invoice</value>
+            <value description="accountType">13</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">16</value>
+            <value description="compoundElementId">2</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">21</value>
+            <value description="account">0000</value>
+            <value description="name">AP Invoice</value>
+            <value description="accountType">13</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">17</value>
+            <value description="compoundElementId">5</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">22</value>
+            <value description="account">0000</value>
+            <value description="name">Contributions</value>
+            <value description="accountType">13</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">18</value>
+            <value description="compoundElementId">6</value>
+            <value description="compoundElementId2">0</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">23</value>
+            <value description="account">0000</value>
+            <value description="name">Cash Disbursements</value>
+            <value description="accountType">13</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">19</value>
+            <value description="compoundElementId">1</value>
+            <value description="compoundElementId2">15</value>
+            <value description="control">false</value>
+        </row>
+        <row>
+            <value description="id">24</value>
+            <value description="account">0000</value>
+            <value description="name">Cash Receipts</value>
+            <value description="accountType">13</value>
+            <value description="amountType">1</value>
+            <value description="list">true</value>
+            <value description="listElementId">20</value>
+            <value description="compoundElementId">1</value>
+            <value description="compoundElementId2">15</value>
+            <value description="control">false</value>
+        </row>
+    </table>
+
+    <!-- ################################################################# -->
+    <!-- ITEM                                                              -->
+    <!-- ################################################################# -->
+    <table name="item">
+        <column>id</column>
+        <column>itemCode</column>
+        <column>name</column>
+        <column>amount</column>
+        <column>compoundItemId</column>
+        <column>compoundItemId2</column>
+        <column>elementId</column>
+        
+        <row>
+            <value description="id">1</value>
+            <value description="itemCode">CONTR12</value>
+            <value description="name">Later</value>
+            <value description="amount">$50,000.00</value>
+            <value description="compoundItemId">6</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">18</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="itemCode">BMW1</value>
+            <value description="name">Later</value>
+            <value description="amount">$35,000.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">4</value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="itemCode">HONDA1</value>
+            <value description="name">Later</value>
+            <value description="amount">$15,000.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">4</value>
+        </row>
+        <row>
+            <value description="id">4</value>
+            <value description="itemCode">AR#NCDOT2</value>
+            <value description="name">Later</value>
+            <value description="amount">$7,000.00</value>
+            <value description="compoundItemId">2</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">16</value>
+        </row>
+        <row>
+            <value description="id">5</value>
+            <value description="itemCode">AP#78302</value>
+            <value description="name">Later</value>
+            <value description="amount">$1,000.00</value>
+            <value description="compoundItemId">5</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">17</value>
+        </row>
+        <row>
+            <value description="id">6</value>
+            <value description="itemCode">PRT100</value>
+            <value description="name">Later</value>
+            <value description="amount">$700.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">3</value>
+        </row>
+        <row>
+            <value description="id">7</value>
+            <value description="itemCode">FX1</value>
+            <value description="name">Later</value>
+            <value description="amount">$300.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">3</value>
+        </row>
+        <row>
+            <value description="id">8</value>
+            <value description="itemCode">CR1</value>
+            <value description="name">Later</value>
+            <value description="amount">$20,000.00</value>
+            <value description="compoundItemId">1</value>
+            <value description="compoundItemId2">15</value>
+            <value description="elementId">20</value>
+        </row>
+        <row>
+            <value description="id">9</value>
+            <value description="itemCode">AP#5473</value>
+            <value description="name">Later</value>
+            <value description="amount">$150.00</value>
+            <value description="compoundItemId">5</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">17</value>
+        </row>
+        <row>
+            <value description="id">10</value>
+            <value description="itemCode">CD1002</value>
+            <value description="name">Later</value>
+            <value description="amount">$1000.00</value>
+            <value description="compoundItemId">1</value>
+            <value description="compoundItemId2">15</value>
+            <value description="elementId">19</value>
+        </row>
+        <row>
+            <value description="id">11</value>
+            <value description="itemCode">CD4572</value>
+            <value description="name">Later</value>
+            <value description="amount">$60.00</value>
+            <value description="compoundItemId">1</value>
+            <value description="compoundItemId2">15</value>
+            <value description="elementId">19</value>
+        </row>
+        <row>
+            <value description="id">12</value>
+            <value description="itemCode">AP#90672</value>
+            <value description="name">Later</value>
+            <value description="amount">$500.00</value>
+            <value description="compoundItemId">5</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">17</value>
+        </row>
+        <row>
+            <value description="id">13</value>
+            <value description="itemCode">INS#892677</value>
+            <value description="name">Later</value>
+            <value description="amount">$500.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">14</value>
+        </row>
+        <row>
+            <value description="id">14</value>
+            <value description="itemCode">OPER</value>
+            <value description="name">Later</value>
+            <value description="amount">$0.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">1</value>
+        </row>
+        <row>
+            <value description="id">15</value>
+            <value description="itemCode">ANDY</value>
+            <value description="name">Andy's Auto Shop</value>
+            <value description="amount">$0.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">15</value>
+        </row>
+        <row>
+            <value description="id">16</value>
+            <value description="itemCode">DOE</value>
+            <value description="name">John Doe</value>
+            <value description="amount">$0.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">15</value>
+        </row>
+        <row>
+            <value description="id">17</value>
+            <value description="itemCode">SHELL</value>
+            <value description="name">Shell Gas</value>
+            <value description="amount">$0.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">15</value>
+        </row>
+        <row>
+            <value description="id">18</value>
+            <value description="itemCode">JACK</value>
+            <value description="name">My Insurance Guy</value>
+            <value description="amount">$0.00</value>
+            <value description="compoundItemId">0</value>
+            <value description="compoundItemId2">0</value>
+            <value description="elementId">15</value>
+        </row>
+    </table>
+
+    <!-- ################################################################# -->
+    <!-- EVENT                                                             -->
+    <!-- ################################################################# -->
+    <table name="event">
+        <column>id</column>
+        <column>elementId1</column>
+        <column>elementId2</column>
+        <column>maxAmount</column>
+        <column>underElementId</column>
+        <column>overElementId</column>
+        <column>alternateEvent</column>
+        <row>
+            <value description="id">1</value>
+            <value description="elementId1">3</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">11</value>
+            <value description="overElementId">3</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="elementId1">4</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">4</value>
+            <value description="overElementId">4</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">3</value>
+            <value description="elementId1">7</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">7</value>
+            <value description="overElementId">7</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">4</value>
+            <value description="elementId1">8</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">8</value>
+            <value description="overElementId">8</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">5</value>
+            <value description="elementId1">9</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">9</value>
+            <value description="overElementId">9</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">6</value>
+            <value description="elementId1">10</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">10</value>
+            <value description="overElementId">10</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">7</value>
+            <value description="elementId1">11</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">11</value>
+            <value description="overElementId">11</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">8</value>
+            <value description="elementId1">12</value>
+            <value description="elementId2">3</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">12</value>
+            <value description="overElementId">3</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">9</value>
+            <value description="elementId1">12</value>
+            <value description="elementId2">4</value>
+            <value description="maxAmount">$1000.00</value>
+            <value description="underElementId">12</value>
+            <value description="overElementId">4</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">10</value>
+            <value description="elementId1">13</value>
+            <value description="elementId2">4</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">13</value>
+            <value description="overElementId">13</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">11</value>
+            <value description="elementId1">14</value>
+            <value description="elementId2">4</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">14</value>
+            <value description="overElementId">14</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">12</value>
+            <value description="elementId1">14</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">14</value>
+            <value description="overElementId">14</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">13</value>
+            <value description="elementId1">16</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">2</value>
+            <value description="overElementId">2</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">14</value>
+            <value description="elementId1">17</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">5</value>
+            <value description="overElementId">5</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">15</value>
+            <value description="elementId1">18</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">6</value>
+            <value description="overElementId">6</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">16</value>
+            <value description="elementId1">19</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">1</value>
+            <value description="overElementId">1</value>
+            <value description="alternateEvent">0</value>
+        </row>
+        <row>
+            <value description="id">17</value>
+            <value description="elementId1">20</value>
+            <value description="elementId2">0</value>
+            <value description="maxAmount">$500.00</value>
+            <value description="underElementId">1</value>
+            <value description="overElementId">1</value>
+            <value description="alternateEvent">0</value>
+        </row>
+    </table>
+    <!-- ################################################################# -->
+    <!-- ACCOUNT TYPE                                                      -->
+    <!-- ################################################################# -->
+        <table name="account_type">
+            <column>id</column>
+            <column>name</column>
+            <row>
+                <value description="id">1</value>
+                <value description="name">Current Assets</value>
+            </row>
+            <row>
+                <value description="id">2</value>
+                <value description="name">Fixed Assets</value>
+            </row>
+            <row>
+                <value description="id">3</value>
+                <value description="name">Other Assets</value>
+            </row>
+            <row>
+                <value description="id">4</value>
+                <value description="name">Current Liabilities</value>
+            </row>
+            <row>
+                <value description="id">5</value>
+                <value description="name">Long Term Liabilities</value>
+            </row>
+            <row>
+                <value description="id">6</value>
+                <value description="name">Owners Equity</value>
+            </row>
+            <row>
+                <value description="id">7</value>
+                <value description="name">Retained Earnings</value>
+            </row>
+            <row>
+                <value description="id">8</value>
+                <value description="name">Revenue</value>
+            </row>
+            <row>
+                <value description="id">9</value>
+                <value description="name">Costs</value>
+            </row>
+            <row>
+                <value description="id">10</value>
+                <value description="name">Expenses</value>
+            </row>
+            <row>
+                <value description="id">11</value>
+                <value description="name">Other Income</value>
+            </row>
+            <row>
+                <value description="id">12</value>
+                <value description="name">Other Expenses</value>
+            </row>
+            <row>
+                <value description="id">13</value>
+                <value description="name">Off</value>
+            </row>
+       </table>
+                 
+    <!-- ################################################################# -->
+    <!-- AMOUNT TYPE                                                       -->
+    <!-- ################################################################# -->
+        <table name="amount_type">
+            <column>id</column>
+            <column>name</column>
+            <row>
+                <value description="id">1</value>
+                <value description="name">Accounting</value>
+            </row>
+            <row>
+                <value description="id">2</value>
+                <value description="name">Budget</value>
+            </row>
+            <row>
+                <value description="id">3</value>
+                <value description="name">Contract</value>
+            </row>
+            <row>
+                <value description="id">4</value>
+                <value description="name">List</value>
+            </row>
+
+        </table>
+</dataset>
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+/**
+ * Cape Henry Technologies Inc. licenses this file to You under
+ * the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License.  You may obtain a copy of
+ * the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.cpht.dao;
+
+import com.cpht.model.Item;
+
+import java.util.List;
+
+import org.springframework.dao.DataIntegrityViolationException;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 3, 2009
+ * Time: 12:47:27 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class ItemDaoTest extends BaseDaoTestCase {
+
+
+    private GenericDao<Item, Long> dao;
+
+    public void setItemDao(GenericDao<Item, Long> itemDao) {
+        this.dao = itemDao;
+    }
+
+    public void testGetItem() throws Exception {
+
+        Item item = dao.get(1L);
+
+        assertNotNull(item);
+        assertEquals("CONTR12", item.getItemCode());
+
+    }
+
+    public void testGetItems() throws Exception {
+        List<Item> items = dao.getAll();
+
+        assertNotNull(items);
+        assertEquals(new Long(18), new Long(items.size()));
+
+    }
+
+    public void testUpdateItem() throws Exception {
+
+        Item item = dao.get(1L);
+
+        dao.save(item);
+        flush();
+
+        item = dao.get(1L);
+        assertEquals("CONTR12", item.getItemCode());
+
+        // verify that violation occurs when adding new user with same name
+        item.setId(null);
+
+        endTransaction();
+
+        try {
+            dao.save(item);
+            flush();
+            fail("saveItem didn't throw DataIntegrityViolationException");
+        } catch (DataIntegrityViolationException e) {
+            assertNotNull(e);
+            log.debug("expected exception: " + e.getMessage());
+        }
+    }
+
+
+}
+
+

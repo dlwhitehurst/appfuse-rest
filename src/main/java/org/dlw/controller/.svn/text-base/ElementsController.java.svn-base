@@ -1,0 +1,134 @@
+/**
+ * Cape Henry Technologies Inc. licenses this file to You under
+ * the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License.  You may obtain a copy of
+ * the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.cpht.controller;
+
+import com.opensymphony.xwork2.ValidationAwareSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Validateable;
+import com.cpht.model.Customer;
+import com.cpht.model.Element;
+import com.cpht.service.GenericManager;
+import org.apache.struts2.convention.annotation.Results;
+import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.rest.HttpHeaders;
+import org.apache.struts2.rest.DefaultHttpHeaders;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.BeanFactory;
+
+import java.util.Collection;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 2, 2009
+ * Time: 11:11:04 PM
+ * To change this template use File | Settings | File Templates.
+ */
+@Results({
+    @Result(name="success", type="redirectAction", params = {"actionName" , "elements"})
+})
+public class ElementsController extends ValidationAwareSupport implements ModelDriven<Object>, Validateable {
+    private Element model = new Element();
+    private String id;
+    private Collection<Element> list;
+
+    private GenericManager<Element, Long> elementService = null;
+
+    public ElementsController() {
+
+        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext(
+                new String[] {"applicationContext-dao.xml", "applicationContext-service.xml",
+                "applicationContext-resources.xml"});
+
+
+        BeanFactory factory = (BeanFactory) appContext;
+        elementService = (GenericManager<Element, Long>) factory.getBean("elementManager");
+    }
+
+    // GET /elements/1
+    public HttpHeaders show() {
+        model = elementService.get(new Long(id));
+        return new DefaultHttpHeaders("show");
+    }
+
+    // GET /elements
+    public HttpHeaders index() {
+        list = elementService.getAll();
+
+        return new DefaultHttpHeaders("index")
+            .disableCaching();
+    }
+
+    // GET /elements/1/edit
+    public String edit() {
+        return "edit";
+    }
+
+    // GET /elements/new
+    public String editNew() {
+        model = new Element();
+        return "editNew";
+    }
+
+    // GET /elements/1/deleteConfirm
+    public String deleteConfirm() {
+        return "deleteConfirm";
+    }
+
+    // DELETE /elements/1
+    public String destroy() {
+        elementService.remove(new Long(id));
+        addActionMessage("Element removed successfully");
+        return "success";
+    }
+
+    // POST /elements
+    public String create() {
+        elementService.save(model);
+        //addActionMessage("New element created successfully");
+        //return new DefaultHttpHeaders("success")
+          //  .setLocationId(model.getId());
+
+        return "test";
+    }
+
+
+    // PUT /elements/1
+    public String update() {
+        elementService.save(model);
+        addActionMessage("element updated successfully");
+        return "test";
+    }
+
+    public void validate() {
+//        if (model.getClientName() == null || model.getClientName().length() ==0) {
+//            addFieldError("clientName", "The client name is empty");
+//        }
+    }
+
+    public void setId(String id) {
+        if (id != null) {
+            this.model = elementService.get(new Long(id));
+        }
+
+        this.id = id;
+    }
+
+    public Object getModel() {
+        return (list != null ? list : model);
+    }
+
+}

@@ -1,0 +1,24 @@
+package com.cpht.service;
+
+import com.cpht.model.Customer;
+import com.cpht.controller.CustomersController;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts2.rest.HttpHeaders;
+import org.springframework.beans.factory.BeanFactory;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 3, 2009
+ * Time: 12:48:57 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class ElementControllerTest extends BaseManagerTestCase {
+
+
+    public void testController() throws Exception {
+        // do nothing
+    }
+
+}

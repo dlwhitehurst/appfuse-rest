@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+<!-- ################################################################# -->
+<!-- CUSTOMER                                                          -->
+<!-- ################################################################# -->
+    <table name="customer">
+        <column>id</column>
+        <column>name</column>
+        <column>phone</column>
+        <row>
+            <value description="id">1</value>
+            <value description="name">David Whitehurst</value>
+            <value description="phone">800-344-8934</value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="name">Aaron Evans</value>
+            <value description="phone">800-377-1297</value>
+        </row>
+    </table>
+
+</dataset>
+
+
+
+
+
+
+

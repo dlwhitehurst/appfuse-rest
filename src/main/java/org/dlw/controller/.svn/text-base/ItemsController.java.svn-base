@@ -1,0 +1,131 @@
+/**
+ * Cape Henry Technologies Inc. licenses this file to You under
+ * the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License.  You may obtain a copy of
+ * the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.cpht.controller;
+
+import com.opensymphony.xwork2.ValidationAwareSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Validateable;
+import com.cpht.model.Item;
+import com.cpht.service.GenericManager;
+import org.apache.struts2.rest.HttpHeaders;
+import org.apache.struts2.rest.DefaultHttpHeaders;
+import org.apache.struts2.convention.annotation.Results;
+import org.apache.struts2.convention.annotation.Result;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.BeanFactory;
+
+import java.util.Collection;
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: dlwhitehurst
+ * Date: May 2, 2009
+ * Time: 11:11:12 PM
+ * To change this template use File | Settings | File Templates.
+ */
+@Results({
+    @Result(name="success", type="redirectAction", params = {"actionName" , "items"})
+})
+public class ItemsController extends ValidationAwareSupport implements ModelDriven<Object>, Validateable {
+    private Item model = new Item();
+    private String id;
+    private Collection<Item> list;
+
+    private GenericManager<Item, Long> itemService = null;
+
+    public ItemsController() {
+
+        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext(
+                new String[] {"applicationContext-dao.xml", "applicationContext-service.xml",
+                "applicationContext-resources.xml"});
+
+
+        BeanFactory factory = (BeanFactory) appContext;
+        itemService = (GenericManager<Item, Long>) factory.getBean("itemManager");
+    }
+
+    // GET /items/1
+    public HttpHeaders show() {
+        model = itemService.get(new Long(id));
+        return new DefaultHttpHeaders("show");
+    }
+
+    // GET /items
+    public HttpHeaders index() {
+        list = itemService.getAll();
+
+        return new DefaultHttpHeaders("index")
+            .disableCaching();
+    }
+
+    // GET /items/1/edit
+    public String edit() {
+        return "edit";
+    }
+
+    // GET /items/new
+    public String editNew() {
+        model = new Item();
+        return "editNew";
+    }
+
+    // GET /items/1/deleteConfirm
+    public String deleteConfirm() {
+        return "deleteConfirm";
+    }
+
+    // DELETE /items/1
+    public String destroy() {
+        itemService.remove(new Long(id));
+        addActionMessage("Item removed successfully");
+        return "success";
+    }
+
+    // POST /items
+    public HttpHeaders create() {
+        itemService.save(model);
+        addActionMessage("New item created successfully");
+        return new DefaultHttpHeaders("success")
+            .setLocationId(model.getId());
+    }
+
+    // PUT /items/1
+    public String update() {
+        itemService.save(model);
+        addActionMessage("item updated successfully");
+        return "success";
+    }
+
+    public void validate() {
+//        if (model.getClientName() == null || model.getClientName().length() ==0) {
+//            addFieldError("clientName", "The client name is empty");
+//        }
+    }
+
+    public void setId(String id) {
+        if (id != null) {
+            this.model = itemService.get(new Long(id));
+        }
+
+        this.id = id;
+    }
+
+    public Object getModel() {
+        return (list != null ? list : model);
+    }
+
+
+}
